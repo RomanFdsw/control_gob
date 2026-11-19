@@ -1,4 +1,4 @@
-name: Merticks demo 
+name: Matrix demo
 on: push
 jobs: 
     build:
