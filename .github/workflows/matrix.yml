@@ -6,15 +6,15 @@ jobs:
      strategy: 
         matrix:
           node-version: [12, 14, 15, 16]
-          operationg-system: [ubuntu-latest, windows-latest]
+          operating-system: [ubuntu-latest, windows-latest]
           include: 
-            - node-verison: 18
+            - node-version: 18
               operating-system: ubuntu-latest
               npm: 6
           exclude:
             - node-version: 12 
               operating-system: windows-latest
-     runs-on: ${{matrix.operationg-system}}
+     runs-on: ${{ matrix.operating-system }}
      steps:
       - name: Get the code
         uses: 'actions/checkout@v4'
