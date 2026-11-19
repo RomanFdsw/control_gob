@@ -85,4 +85,6 @@ jobs:
      - name: Output information
        run: | 
           echo "Something went wrong"
-          echo ${{ toJson(github) }}
+          cat <<'GITHUB_CONTEXT'
+          ${{ toJson(github) }}
+          GITHUB_CONTEXT
